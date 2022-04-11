@@ -1,7 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-color yellow, purple, resetWhite, buttonColour;
+color yellow=#FFFF00, purple=#FF00FF, resetWhite=#FFFFFF, buttonColour; //Notice NightMode Blue Values
 //
 void setup() {
   fullScreen();
@@ -25,7 +25,11 @@ void setup() {
 //
 void draw() 
 {
-  buttonColour = purple; //yellow
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+    buttonColour = yellow;
+  } else {
+    buttonColour = purple;
+  }
   fill(buttonColour);
   rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight );
   fill(resetWhite);
