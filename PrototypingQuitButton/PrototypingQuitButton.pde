@@ -1,6 +1,6 @@
 //Global Variables
 int appWidth, appHeight;
-color resetWhite=#FFFFFF
+color resetWhite=#FFFFFF;
 //
 void setup() {
   fullScreen();
